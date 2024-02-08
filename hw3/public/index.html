@@ -1,0 +1,172 @@
+<!-- Jacob Arnez -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+        </script>
+        <link rel="stylesheet" href="stylesheets/myStyle.css">
+    </head>
+    <body>
+    <h1>Cheesecake Order Form</h1>
+    <img src="images/cheese_cake.jpg" src="Picture of cheese cake" width="200" height="300">
+    
+
+
+    <form method="get">
+
+        <p>Quantity Topping</p>
+        <select name="quantity" id="quantity">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br>
+
+        <!---  I can't get the radio button to be to the right of the drop down for now its on the bottom   --->
+        <input type="radio" id="plain" name="topping" value="Plain">
+                <label for="plain">Plain</label><br>
+                <input type="radio" id="cherry" name="topping" value="Cherry">
+                <label for="Cherry">Cherry</label><br>
+                <input type="radio" id="chocolate" name="topping" value="Chocolate">
+                <label for="Chocolate">Chocolate</label><br>
+        <!-- Maybe use a table for the radio buttons -->
+
+        <p>Notes:</p>
+        <textarea name="textarea" id="textarea" placeholder="Enter any special instruction here"></textarea>
+        <br>
+        <button id="order" type="order" form="order" value="Order">Order</button>
+
+    </form>
+    <!-- Initally empty, when the form is filled and then hidden it'll be given text -->
+    <p id="thankyouText"></p>
+
+   
+    <h3>Orders for <div class="dropdown">
+        <button class="dropbtn" id="hoverbtn">January</button>
+        <div class="dropdown-content">
+            <a href="#" class="month" id="jan">Jan</a>
+            <a href="#" class="month" id="feb">Feb</a>
+            <a href="#" class="month" id="mar">Mar</a>
+            <a href="#" class="month" id="apr">Apr</a>
+            <a href="#" class="month" id="may">May</a>
+            <a href="#" class="month" id="jun">Jun</a>
+            <a href="#" class="month" id="jul">Jul</a>
+            <a href="#" class="month" id="aug">Aug</a>
+            <a href="#" class="month" id="sep">Sep</a>
+            <a href="#" class="month" id="oct">Oct</a>
+            <a href="#" class="month" id="nov">Nov</a>
+            <a href="#" class="month" id="dec">Dec</a>
+        </div>
+
+    </div>
+
+    </h3>
+    
+
+    <ul>
+        <li>11 cherry</li>
+        <li>17 chocolate</li>
+        <li>31 plain</li>
+    </ul>
+
+    </body>
+
+    <script>
+        $(document).ready(function() {
+            
+            $("#order").click(function(){
+                //Get the variables
+                var txt = $("textarea").val();
+                var quantity = $("select").val();
+                var topping = $("input[type='radio'][name='topping']:checked").val();
+
+                if (txt == "vegan" ) {
+                    
+                    alert("Stupid cheesecake has dairy");
+                }else {
+                    $("form").hide();
+
+                    alert("Thank you, your order has been placed \n"
+                     + "Quantity: " +quantity + "\n"
+                      + "Topping: " + topping + "\n"
+                      + "Note: " + txt);
+                    $("#thankyouText").text("Thank you!");
+                }
+            });
+
+            $("#jan").click(function(){
+                $("#hoverbtn").text('January');
+
+            });
+
+            $("#feb").click(function(){
+                $("#hoverbtn").text('Feburary');
+
+            });
+            
+            $("#mar").click(function(){
+                $("#hoverbtn").text('March');
+
+            });
+            
+            $("#apr").click(function(){
+                $("#hoverbtn").text('April');
+
+            });
+
+            $("#may").click(function(){
+                $("#hoverbtn").text('May');
+
+            });
+
+            $("#jun").click(function(){
+                $("#hoverbtn").text('June');
+
+            });
+
+            $("#jul").click(function(){
+                $("#hoverbtn").text('July');
+
+            });
+
+            $("#aug").click(function(){
+                $("#hoverbtn").text('August');
+
+            });
+
+            $("#sep").click(function(){
+                $("#hoverbtn").text('September');
+
+            });
+
+            $("#oct").click(function(){
+                $("#hoverbtn").text('October');
+
+            });
+
+            $("#nov").click(function(){
+                $("#hoverbtn").text('November');
+
+            });
+
+            $("#dec").click(function(){
+                $("#hoverbtn").text('December');
+
+            });
+
+
+
+
+
+
+
+
+
+            
+
+        });
+    </script>
+
+
+</html>
