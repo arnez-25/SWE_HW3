@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // Added for HW4
-var ordersRouter = require('./routes/users');
+var ordersRouter = require('./routes/orders');
 
 var app = express();
 
