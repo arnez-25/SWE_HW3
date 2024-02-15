@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET orders listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.json({"name":"John", "age":30, "car":null})
 });
 
 module.exports = router;
