@@ -1,6 +1,8 @@
 // Jacob Arnez
 
 $(document).ready(function() {
+
+    
             
     $("#order").click(function(){
         //Get the variables
@@ -22,9 +24,12 @@ $(document).ready(function() {
         }
     });
 
+        
+    
+
     $("#jan").click(function(){
         $("#hoverbtn").text('January');
-
+        $.post('orders.js');
 
     });
 
