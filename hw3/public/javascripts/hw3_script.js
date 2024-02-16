@@ -29,7 +29,9 @@ $(document).ready(function() {
 
     $("#jan").click(function(){
         $("#hoverbtn").text('January');
-        $.post('orders.js');
+        $.post('/orders', function(data){
+            alert(data[0].topping)
+        });
 
     });
 
