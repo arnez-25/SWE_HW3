@@ -32,9 +32,7 @@ $(document).ready(function() {
         // We have a post in orders that sends the json so when we call post here we can finally obtain it
         $.post('/orders', function(data){
             //alert(data[0].topping + ", " + data[0].quantity )
-            $("#order1").text(data[0].quantity + " " + data[0].topping);
-            $("#order2").text(data[1].quantity + " " + data[1].topping);
-            $("#order3").text(data[2].quantity + " " + data[2].topping);
+            alert(data)
         });
 
     });

@@ -1,5 +1,7 @@
 //Jacob Arnez
 
+
+
 var express = require('express');
 var router = express.Router();
 
@@ -14,7 +16,8 @@ router.get('/', function(req, res, next) {
 
 /* POST orders when a post request is sent on the client side it sends the json object */
 router.post('/', function(req, res) {
-  res.send(cheesecakes);
+  //res.send(cheesecakes);
+  res.send("hello")
 });
 
 
