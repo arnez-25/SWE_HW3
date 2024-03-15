@@ -30,9 +30,10 @@ $(document).ready(function() {
     $("#jan").click(function(){
         $("#hoverbtn").text('January');
         // We have a post in orders that sends the json so when we call post here we can finally obtain it
-        $.post('/orders', function(data){
+        $.post('/orders', "JAN",function(data){
             //alert(data[0].topping + ", " + data[0].quantity )
-            alert(data)
+            alert(data);
+
         });
 
     });
